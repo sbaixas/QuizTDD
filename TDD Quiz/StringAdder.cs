@@ -15,12 +15,7 @@ namespace TestDrivenDevelopment
 
         public static int SumString(string s)
         {
-            int result = 0;
-            foreach(int i in ParseString(s))
-            {
-                result += i;
-            }
-            return result;
+            return ParseString(s).ToArray().Sum();
         }
     }
 }
