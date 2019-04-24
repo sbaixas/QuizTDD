@@ -15,12 +15,17 @@ namespace TestDrivenDevelopment
 
         public static List<int> ParseString(string s)
         {
-            return Array.ConvertAll(s.Split(','), int.Parse).ToList();
+            return Array.ConvertAll(PreParseString(s).Split(','), int.Parse).ToList();
         }
 
         public static string PreParseString(string s)
         {
-            return null;
+            string result = s;
+            if (!char.IsDigit(s.ToCharArray()[0]))
+            {
+                result = s.Substring(1, s.Length - 1).Replace(s.ToCharArray()[0], ',');
+            }
+            return result;
         }
 
         
