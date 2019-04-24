@@ -31,5 +31,13 @@ namespace UnitTestProject
             List<int> resultList = new List<int> { 5, 3, 2, 6};
             CollectionAssert.AreEquivalent(resultList, StringAdder.ParseString(testString));
         }
+
+        [TestMethod]
+        public void TestRemoveNegatives()
+        {
+            string testString = "1,2,3,4,-4";
+            int result = 10;
+            Assert.AreEqual(result, StringAdder.SumString(testString));
+        }
     }
 }

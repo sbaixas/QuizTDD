@@ -22,9 +22,5 @@ namespace TestDrivenDevelopment
         {
             return !char.IsDigit(s.ToCharArray()[0]) ? s.Substring(1, s.Length - 1).Replace(s.ToCharArray()[0], ',') : s;
         }
-
-        
-
-        
     }
 }
