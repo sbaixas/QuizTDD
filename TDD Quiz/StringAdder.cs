@@ -10,8 +10,7 @@ namespace TestDrivenDevelopment
     {
         public static List<int> ParseString(string s)
         {
-            string[] splitedString = s.Split(',');
-            return Array.ConvertAll<string,int>(splitedString, int.Parse).ToList<int>();
+            return Array.ConvertAll(s.Split(','), int.Parse).ToList();
         }
     }
 }
