@@ -23,5 +23,13 @@ namespace UnitTestProject
             int result = 25;
             Assert.AreEqual(result, StringAdder.SumString(testString));
         }
+
+        [TestMethod]
+        public void TestPreParseString()
+        {
+            string testString = ";5;3;2;6";
+            List<int> resultList = new List<int> { 5, 3, 2, 6};
+            CollectionAssert.AreEquivalent(resultList, StringAdder.ParseString(testString));
+        }
     }
 }
