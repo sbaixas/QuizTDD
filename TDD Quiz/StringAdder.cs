@@ -10,7 +10,7 @@ namespace TestDrivenDevelopment
     {
         public static int SumString(string s)
         {
-            return ParseString(s).ToArray().Sum();
+            return RemoveNegatives(ParseString(s)).ToArray().Sum();
         }
 
         public static List<int> ParseString(string s)
@@ -21,6 +21,16 @@ namespace TestDrivenDevelopment
         public static string PreParseString(string s)
         {
             return !char.IsDigit(s.ToCharArray()[0]) ? s.Substring(1, s.Length - 1).Replace(s.ToCharArray()[0], ',') : s;
+        }
+
+        public static List<int> RemoveNegatives(List<int> list)
+        {
+            for(int i = 0; i < list.Count; i++) {
+                if (list[i] < 0){
+                    list[i] = 0;
+                }
+            }
+            return list;
         }
     }
 }
