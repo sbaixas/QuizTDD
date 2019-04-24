@@ -12,5 +12,10 @@ namespace TestDrivenDevelopment
         {
             return Array.ConvertAll(s.Split(','), int.Parse).ToList();
         }
+
+        public static int SumString(string s)
+        {
+            return 0;
+        }
     }
 }

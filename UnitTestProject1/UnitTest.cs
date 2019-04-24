@@ -15,5 +15,13 @@ namespace UnitTestProject
             List<int> resultList = new List<int> { 1, 5, 2, 3, 4 };
             CollectionAssert.AreEquivalent(resultList, StringAdder.ParseString(testString));
         }
+
+        [TestMethod]
+        public void TestSumString()
+        {
+            string testString = "2,3,9,7,4";
+            int result = 25;
+            Assert.AreEqual(result, StringAdder.SumString(testString));
+        }
     }
 }
