@@ -25,11 +25,7 @@ namespace TestDrivenDevelopment
 
         public static List<int> RemoveNegatives(List<int> list)
         {
-            for(int i = 0; i < list.Count; i++) {
-                if (list[i] < 0){
-                    list[i] = 0;
-                }
-            }
+            if (list.FindIndex(i => i < 0) != -1) list[list.FindIndex(i => i < 0)] = 0;
             return list;
         }
     }
