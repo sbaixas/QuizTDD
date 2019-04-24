@@ -15,7 +15,12 @@ namespace TestDrivenDevelopment
 
         public static int SumString(string s)
         {
-            return 0;
+            int result = 0;
+            foreach(int i in ParseString(s))
+            {
+                result += i;
+            }
+            return result;
         }
     }
 }
